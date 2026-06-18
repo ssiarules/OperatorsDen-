@@ -40,7 +40,7 @@ function AboutPage() {
         </Reveal>
         <Reveal delay={1}>
           <p style={{ margin: '22px 0 0', fontSize: 17, lineHeight: 1.65, color: 'var(--text-body)', maxWidth: 580 }}>
-            We install AI operating systems built around how you actually think and run your business. Not demos. Not tutorials. A real system, mapped to your real workflows, built live with you. We work with individual operators, teams, and companies.
+            We build systems around how you actually think and run your business. Not demos. Not tutorials. A real system, mapped to your real workflows, built live with you. We work with individual operators, teams, and companies.
           </p>
         </Reveal>
       </Section>
@@ -77,20 +77,20 @@ function AboutPage() {
           <Reveal>
             <Eyebrow>The solution</Eyebrow>
             <h2 style={h2({ margin: '14px 0 24px' })}>
-              An AI operating system built around your business.
+              A system built around your business.
             </h2>
             <p style={{ fontSize: 16.5, lineHeight: 1.8, color: 'var(--text-body)', marginBottom: 18 }}>
-              An AI operating system is not a chatbot. It captures your business context permanently — your workflows, your knowledge, your rules — and runs automated tasks on a schedule. It does not forget between conversations. It does not need to be re-explained every Monday morning.
+              This is not a chatbot. It captures your business context permanently — your workflows, your knowledge, your rules — and handles the execution on a schedule. It does not forget between conversations. It does not need to be re-explained every Monday morning.
             </p>
             <p style={{ fontSize: 16.5, lineHeight: 1.8, color: 'var(--text-body)', marginBottom: 28 }}>
-              If you have workflows that repeat and knowledge that lives in your head, you have enough to build a system around them.
+              You stay in the loop as the operator. The system handles execution. You handle decisions. It gets better the more you use it.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {[
                 'Works from your machine — no SaaS subscription',
                 'Captures your business context once, references it forever',
                 'Runs daily and weekly tasks automatically, on schedule',
-                'Every session builds toward a fully autonomous system',
+                'Every session builds toward a system that runs the work while you stay in control',
               ].map(t => (
                 <div key={t} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <span style={{ flexShrink: 0, marginTop: 2, width: 20, height: 20, borderRadius: '50%', background: 'var(--coral-050)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
