@@ -10,13 +10,13 @@ function AboutPage() {
   });
 
   const problems = [
-    { icon: 'refresh-cw', title: 'Same tasks. Every week.', body: 'Reports, follow-ups, research, summaries. The work does not change — only who has to do it.' },
+    { icon: 'refresh-cw', title: 'Same tasks. Every week.', body: 'Reports, follow-ups, research, summaries. The work does not change, only who has to do it.' },
     { icon: 'brain', title: 'Knowledge stuck in your head.', body: 'You know how everything should run. Your tools do not. Every new conversation starts from scratch.' },
     { icon: 'clock', title: 'Hours on things that should run themselves.', body: 'The average operator spends 8 to 12 hours a week on workflows that could run automatically with the right setup.' },
   ];
 
   const differentiators = [
-    { icon: 'hammer', label: 'vs. courses', title: 'We build. We do not teach.', body: 'You leave every session with something real installed and running — not a certificate and a to-do list.' },
+    { icon: 'hammer', label: 'vs. courses', title: 'We build. We do not teach.', body: 'You leave every session with something real installed and running, not a certificate and a to-do list.' },
     { icon: 'key', label: 'vs. consultants', title: 'You own it when we are done.', body: 'No black box. No dependency on us to maintain it. The system lives on your machine and you know how it works.' },
     { icon: 'cpu', label: 'vs. tools', title: 'Mapped to how you actually operate.', body: 'Off-the-shelf tools are built for everyone. We build around your workflows, your data, your voice.' },
   ];
@@ -77,17 +77,17 @@ function AboutPage() {
           <Reveal>
             <Eyebrow>The solution</Eyebrow>
             <h2 style={h2({ margin: '14px 0 24px' })}>
-              A system built around your business.
+              An AI operating system built around your business.
             </h2>
             <p style={{ fontSize: 16.5, lineHeight: 1.8, color: 'var(--text-body)', marginBottom: 18 }}>
-              This is not a chatbot. It captures your business context permanently — your workflows, your knowledge, your rules — and handles the execution on a schedule. It does not forget between conversations. It does not need to be re-explained every Monday morning.
+              This is not a chatbot. It captures your business context permanently, your workflows, your knowledge, your rules, and handles the execution on a schedule. It does not forget between conversations. It does not need to be re-explained every Monday morning.
             </p>
             <p style={{ fontSize: 16.5, lineHeight: 1.8, color: 'var(--text-body)', marginBottom: 28 }}>
               You stay in the loop as the operator. The system handles execution. You handle decisions. It gets better the more you use it.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {[
-                'Works from your machine — no SaaS subscription',
+                'Works from your machine, no SaaS subscription',
                 'Captures your business context once, references it forever',
                 'Runs daily and weekly tasks automatically, on schedule',
                 'Every session builds toward a system that runs the work while you stay in control',
