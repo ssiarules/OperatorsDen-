@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="72" viewBox="0 0 340 72" role="img" aria-label="OperatorsDen logo reversed">
+  <rect x="2" y="2" width="68" height="68" rx="16" fill="#FAB328"></rect>
+  <text x="36" y="37" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="34" letter-spacing="-1.5" fill="#1B3A6B">OD</text>
+  <text x="86" y="37" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="32" letter-spacing="-0.5">
+    <tspan fill="#F7F5F0">Operators</tspan><tspan fill="#FAB328">Den</tspan>
+  </text>
+</svg>

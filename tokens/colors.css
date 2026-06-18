@@ -1,0 +1,104 @@
+/* ============================================================
+   OperatorsDen — Color System
+   "The engine room." Navy core, warm off-white ground,
+   gold/coral signals. Dark sections are Navy, never black.
+   ============================================================ */
+:root {
+  /* ---- Brand base palette ---- */
+  --navy: #1B3A6B;        /* Primary brand · headings · dark sections · "Den" */
+  --sky: #267AC7;         /* Labels · links · "Operators" · secondary highlight */
+  --gold: #FAB328;        /* Logo badge · warm accent · "System running" */
+  --coral: #EB5A34;       /* Primary CTAs · action · inline emphasis · urgency */
+  --offwhite: #F7F5F0;    /* Page background · sections · cards on dark */
+  --white: #FFFFFF;
+
+  /* ---- Navy ramp (derived for surfaces, borders, hovers) ---- */
+  --navy-900: #0f2347;
+  --navy-800: #14294d;
+  --navy-700: #1B3A6B;    /* = --navy */
+  --navy-600: #244a86;
+  --navy-500: #2f5da6;
+  --navy-100: #dde5f0;
+  --navy-050: #eef2f8;
+
+  /* ---- Sky ramp ---- */
+  --sky-700: #1d5e9c;
+  --sky-600: #267AC7;     /* = --sky */
+  --sky-500: #4a93d6;
+  --sky-100: #d7e8f6;
+  --sky-050: #ecf4fb;
+
+  /* ---- Gold ramp ---- */
+  --gold-700: #b07d10;    /* dark gold text on tint */
+  --gold-600: #e09a14;
+  --gold-500: #FAB328;    /* = --gold */
+  --gold-100: #fdeccb;
+  --gold-050: #fef6e6;
+
+  /* ---- Coral ramp ---- */
+  --coral-700: #c0431f;   /* pressed / dark coral text */
+  --coral-600: #d44d2b;   /* hover */
+  --coral-500: #EB5A34;   /* = --coral */
+  --coral-100: #fbdcd2;
+  --coral-050: #fdeee8;
+
+  /* ---- Warm neutrals (paper, ink, lines) ---- */
+  --paper: #F7F5F0;       /* = --offwhite, page ground */
+  --paper-deep: #efece4;  /* recessed warm panel */
+  --ink-900: #16181c;     /* near-black ink (rare) */
+  --ink-700: #45413c;     /* strong body on light */
+  --ink-500: #6B6560;     /* muted body text */
+  --ink-400: #8c867f;     /* secondary / captions */
+  --line: #E2DDD5;        /* warm card + divider border */
+  --line-strong: #d2ccc0;
+
+  /* ============================================================
+     Four Cs — fixed mapping, never reassigned
+     ============================================================ */
+  --c-context: var(--navy);       /* Context */
+  --c-connections: var(--sky);    /* Connections */
+  --c-capabilities: var(--gold);  /* Capabilities */
+  --c-cadence: var(--coral);      /* Cadence */
+
+  /* ============================================================
+     Semantic aliases
+     ============================================================ */
+  --bg-page: var(--paper);
+  --bg-surface: var(--white);
+  --bg-recessed: var(--paper-deep);
+  --bg-dark: var(--navy);             /* dark sections */
+  --bg-dark-recessed: #16305a;
+
+  --text-heading: var(--navy);
+  --text-body: var(--ink-500);
+  --text-strong: var(--ink-700);
+  --text-muted: var(--ink-400);
+  --text-on-dark: var(--offwhite);
+  --text-on-dark-muted: #a9bad6;
+  --text-link: var(--sky);
+  --text-emphasis: var(--coral);      /* inline highlight in headlines */
+  --text-eyebrow: var(--sky);
+
+  --border-card: var(--line);
+  --border-strong: var(--line-strong);
+  --border-on-dark: #2c4a7d;
+
+  --action-primary: var(--coral);     /* primary CTA */
+  --action-primary-hover: var(--coral-600);
+  --action-primary-press: var(--coral-700);
+  --action-dark: var(--navy);
+  --action-dark-hover: var(--navy-600);
+
+  --focus-ring: var(--sky);
+
+  /* Status tints */
+  --status-running-bg: var(--gold-050);
+  --status-running-fg: var(--gold-700);
+  --status-running-dot: var(--gold-500);
+  --status-clients-bg: var(--sky-050);
+  --status-clients-fg: var(--sky-700);
+  --status-clients-dot: var(--sky-600);
+  --status-session-bg: var(--coral-050);
+  --status-session-fg: var(--coral-700);
+  --status-session-dot: var(--coral-500);
+}

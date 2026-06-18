@@ -1,0 +1,56 @@
+/* ============================================================
+   OperatorsDen — Spacing, radii, shadows, layout
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 3rem;      /* 48 */
+  --space-8: 4rem;      /* 64 */
+  --space-9: 6rem;      /* 96 */
+  --space-10: 8rem;     /* 128 */
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;     /* card min */
+  --radius-lg: 12px;    /* card max */
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-pill: 100px; /* all buttons + status badges */
+  --radius-badge: 12px; /* logo badge corner */
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+  --border-width-cta: 2px;     /* secondary button outline */
+  --border-accent: 3px;        /* card top accent */
+
+  /* ---- Shadows (warm, soft — never harsh black) ---- */
+  --shadow-xs: 0 1px 2px rgba(27, 58, 107, 0.05);
+  --shadow-sm: 0 2px 6px rgba(27, 58, 107, 0.06);
+  --shadow-md: 0 6px 20px rgba(27, 58, 107, 0.08);
+  --shadow-lg: 0 18px 48px rgba(27, 58, 107, 0.12);
+  --shadow-cta: 0 6px 18px rgba(235, 90, 52, 0.28);   /* coral lift */
+  --shadow-cta-hover: 0 10px 26px rgba(235, 90, 52, 0.34);
+
+  /* ---- Focus ---- */
+  --focus-ring-width: 3px;
+  --focus-ring-color: rgba(38, 122, 199, 0.45);
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --section-pad-y: clamp(3.5rem, 2rem + 7vw, 7rem);
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 2.5rem); /* @kind spacing */
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);  /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --dur-fast: 120ms;  /* @kind other */
+  --dur-base: 200ms;  /* @kind other */
+  --dur-slow: 320ms;  /* @kind other */
+}

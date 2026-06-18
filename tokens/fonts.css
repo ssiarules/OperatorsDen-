@@ -1,0 +1,8 @@
+/* OperatorsDen uses Inter exclusively (all weights). Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  /* No secondary typeface. Mono is only for code/system surfaces (Claude Code views). */
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}

@@ -1,0 +1,114 @@
+/* OperatorsDen — landing page base layer.
+   Tokens are loaded separately (tokens/*.css). This file is base + motion. */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-page);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: color-mix(in srgb, var(--coral) 24%, transparent); }
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* Warm paper grain — barely-there texture so flat sections feel like paper, not screen */
+.paper-grain::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(27,58,107,0.035) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ---- Scroll reveal — CSS entrance (plays once on mount, ends visible) ---- */
+@keyframes odFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: none; }
+.reveal-d1 { transition-delay: 0.07s; }
+.reveal-d2 { transition-delay: 0.14s; }
+.reveal-d3 { transition-delay: 0.21s; }
+.reveal-d4 { transition-delay: 0.28s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *[style*="odFadeUp"] { animation: none !important; opacity: 1 !important; transform: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---- Terminal cursor blink ---- */
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+.cursor { display: inline-block; width: 8px; height: 1.05em; transform: translateY(2px);
+  background: var(--gold); margin-left: 2px; animation: blink 1s steps(1) infinite; }
+
+/* ---- Live dot pulse ---- */
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 55%, transparent); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.live-dot { animation: pulse-dot 2s infinite; }
+
+/* ---- Marquee ---- */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: inline-flex; gap: 48px; padding-right: 48px; animation: marquee 32s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* ---- Nav ---- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.nav-link { position: relative; font-size: 14.5px; font-weight: 600; color: var(--text-strong);
+  transition: color 0.2s var(--ease-out); cursor: pointer; }
+.nav-link:hover { color: var(--navy); }
+.nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 2px;
+  background: var(--coral); transition: right 0.25s var(--ease-out); }
+.nav-link:hover::after { right: 0; }
+
+/* ---- Generic hover lift for cards already handled inline; utility for tiles ---- */
+.tile { transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out); }
+
+/* ---- FAQ accordion ---- */
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: 26px 4px; font-family: var(--font-sans); }
+.faq-a { overflow: hidden; max-height: 0; transition: max-height 0.4s var(--ease-out), opacity 0.3s var(--ease-out); opacity: 0; }
+.faq-a.open { opacity: 1; }
+.faq-chev { transition: transform 0.3s var(--ease-out); flex-shrink: 0; }
+.faq-chev.open { transform: rotate(45deg); }
+
+/* ---- Booking modal ---- */
+.modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(15,35,71,0.55);
+  backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center;
+  padding: 24px; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease-out); }
+.modal-backdrop.open { opacity: 1; pointer-events: auto; }
+.modal-card { background: var(--white); border-radius: var(--radius-2xl); width: min(880px, 100%);
+  max-height: 90vh; overflow: hidden; box-shadow: var(--shadow-lg); transform: translateY(16px) scale(0.98);
+  transition: transform 0.32s var(--ease-out); display: grid; grid-template-columns: 320px 1fr; }
+.modal-backdrop.open .modal-card { transform: none; }
+@media (max-width: 720px) { .modal-card { grid-template-columns: 1fr; } }
+
+.slot { border: 1px solid var(--line); background: var(--white); border-radius: var(--radius-pill);
+  padding: 11px 0; font-weight: 700; font-size: 14px; color: var(--navy); cursor: pointer;
+  transition: all 0.18s var(--ease-out); }
+.slot:hover { border-color: var(--sky); color: var(--sky); }
+.slot.sel { background: var(--navy); border-color: var(--navy); color: var(--offwhite); }
+
+/* hide scrollbars on the day rail */
+.day-rail::-webkit-scrollbar { height: 0; }
