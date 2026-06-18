@@ -72,7 +72,7 @@ function Hero({ go, layout, accent }) {
   const emph = accent === 'gold' ? 'var(--gold)' : 'var(--coral)';
   const headline = (em) => (
     <>Your business runs on what you know.{' '}
-      <span style={{ color: em, position: 'relative', whiteSpace: 'normal' }}>We wire it into an AI system that works while you sleep.</span>
+      <span style={{ color: em, position: 'relative', whiteSpace: 'normal' }}>We wire it into an AI system that runs the work while you stay in control.</span>
     </>
   );
   const sub = 'The Operators Den installs an AI operating system, one 60-minute session at a time. No dev team. No subscriptions. Just a system mapped to how you actually think and operate.';
@@ -180,7 +180,7 @@ function pStyle() {
 
 /* ---------- Logo marquee strip ---------- */
 function ProofStrip() {
-  const items = ['Market report at 7:15 AM', 'Trading journal in 20 min', 'Client reports that write themselves', 'Lead follow-up on autopilot', 'Weekly research, no prompt', 'Inbox triaged before coffee'];
+  const items = ['Market report at 7:15 AM', 'Trading journal in 20 min', 'Client reports that write themselves', 'Lead follow-up handled for you', 'Weekly research, no prompt', 'Inbox triaged before coffee'];
   const row = [...items, ...items];
   return (
     <div style={{ borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)', background: 'var(--white)', padding: '18px 0', overflow: 'hidden' }} className="marquee-wrap">
@@ -214,7 +214,7 @@ function WhatIs() {
           <span style={{ color: 'var(--gold)' }}>That is a habit, not a system.</span>
         </h2>
         <p style={{ margin: '22px 0 0', fontSize: 17, lineHeight: 1.65, color: 'var(--text-on-dark-muted)', maxWidth: 660 }}>
-          An AI operating system is different. It captures your business context, your workflows, your knowledge, your data, and runs on autopilot. It does not forget between conversations. It does not need to be re-explained every Monday morning.
+          A real system is different. It captures your business context, your workflows, your knowledge, your data, and runs the execution so you can focus on decisions. It does not forget between conversations. It does not need to be re-explained every Monday morning.
         </p>
       </Reveal>
 
@@ -307,7 +307,7 @@ function FourCs() {
       <Reveal style={{ textAlign: 'center', marginBottom: 42 }}>
         <Eyebrow>The framework</Eyebrow>
         <h2 style={h2Style({ margin: '14px auto 0', maxWidth: 720 })}>Everything we build runs on Know, Reach, Do, Run</h2>
-        <p style={{ margin: '14px auto 0', maxWidth: 560, fontSize: 16.5, lineHeight: 1.6, color: 'var(--text-body)' }}>A complete AI operating system answers all four. We build toward that together, one session at a time.</p>
+        <p style={{ margin: '14px auto 0', maxWidth: 560, fontSize: 16.5, lineHeight: 1.6, color: 'var(--text-body)' }}>A complete system answers all four. We build toward that together, one session at a time.</p>
       </Reveal>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 18 }}>
         {data.map(([key, num, title, body, icon], i) => (
